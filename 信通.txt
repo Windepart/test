@@ -1,0 +1,46 @@
+一，字段类型取错
+1.1 公司基本信息
+InstallAccountname varchar2(50)->varchar2(100)
+manager            varchar2(50)->varchar2(100)
+IsSpecial          varchar2(2)->varchar2(3)
+
+
+1.3供电线路信息
+LineName           varchar2(50)->varchar2(100)
+
+1.4公司供电线路信息
+PropertyPoint      varchar2(50)->varchar2(100)
+
+1.7电费历史缴费情况
+Amount             varchar2(50)->number(16)
+Expense            varchar2(50)->number(18,2)
+
+3.2基础信息表
+Content           varchar2(500)->varchar2(800)
+
+4 电费电价
+4.2.1 公司电费缴费情况
+IsLack    varchar2(2)->varchar2(3)
+
+6 线损统计
+6.2线路线损
+tjzq     date->varchar2（3）
+
+
+
+
+二，表名重复
+台区信息和线路信息取了同一张表（TQINFO）
+
+三，违反唯一约束条件
+供电线路信息（Line）表的索引（index_4）对lineno唯一约束，但营销系统允许lineno重复
+
+
+四，流程信息表
+表里面缺少name字段。
+
+
+
+
+
+369092759@qq.com
